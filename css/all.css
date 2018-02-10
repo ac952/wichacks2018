@@ -54,6 +54,10 @@ li a:hover:not(.active) {
   left:40px;
 }
 
+#button{
+  z-index: 30;
+}
+
 
 
 

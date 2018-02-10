@@ -16,35 +16,33 @@
           <li><a href="tutorial.php">BUILD YOUR OWN APP!</a></li>
         </ul>
       </div>
-      <img id="logo" alt="cornell2" src="images/girl3.png">
+      <!-- <img id="logo" alt="logo1" src=""> -->
     </div>
   </nav>
-
-
-
   <h1 class="heading"> Girls Run the World</h1>
   <!--slideshow source: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
   <div class="slideshow-container">
     <div class="mySlides fade">
       <div class="numbertext">1 / 3</div>
       <figure>
-        <img alt="pic" src="images/girl2.png" />
+        <img alt="pic" src="images/fashionpattern.png" width="950px" height="600px" />
+        <a href="game.html" class="button">Link Button</a>
       </figure>
     </div>
 
-    <div class="mySlides fade">
+    <!-- <div class="mySlides fade">
       <div class="numbertext">2 / 3</div>
       <figure>
         <img alt="pic" src="images/girl1.png" />
       </figure>
-    </div>
+    </div> -->
 
     <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
+      <div class="numbertext">2 / 3</div>
       <figure>
-        <img alt="pic" src="images/fashionpattern.png" />
-        <!--source: http://wac.b63f.edgecastcdn.net/80B63F/cornellbigred
-        -cojm/common/controls/image_handler.aspx?thumb_prefix=rp_primary -->
+        <img alt="pic" src="images/girl2.png" width="300px" />
+        <!-- <button id="button" type="button">Click Me!</button> -->
+        <a href="" class="button">Link Button</a>
       </figure>
     </div>
 
@@ -52,11 +50,7 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
-  <div id="dot">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+  <button type="button">Click Me!</button>
 
   <script src="scripts/slideShow.js" type="text/javascript"> </script>
 
