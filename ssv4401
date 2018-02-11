@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>JavaScript Face</title>
+<link rel="stylesheet" type="text/css" href="stylez.css">
+</head>
+<header>How to Code in JavaScript</header>
+
+<body>
+	<div>
+	<h3>Draw a circle in JavaScript  </h3>
+	<h2><span>ctx.arc(240, 160, 100, 0, Math.PI*2);</span> </h2>
+	
+	<dl>
+	<dt>Name the object </dt>
+	<dd> <span> ctx.</span> arc(240, 160, 100, 0, Math.PI*2);</dd>
+		
+		
+		
+		
+	<dt>Create the arc </dt>
+	<dd>ctx.<span>arc </span>(240, 160, 100, 0, Math.PI*2);</dd>
+		
+		
+	
+	<dt>Move right or left </dt>
+	<dd>ctx.arc(<span>240</span>, 160, 100, 0, Math.PI*2);</dd>
+		
+		
+	
+	<dt>Move up or down</dt>
+	<dd>ctx.arc(240, <span>160</span>, 100, 0, Math.PI*2);</dd>
+		
+		
+	
+	<dt>Make bigger or smaller</dt>
+	<dd>ctx.arc(240, 160, <span>100</span>, 0, Math.PI*2);</dd>
+		
+		
+		
+	<dt>Arc start and stop points</dt>
+	<dd>ctx.arc(240, 160, 100, <span>0, Math.PI*2);</span></dd>
+		
+	</dl>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div>
+	
+	<h3>Make a Rectangle in JavaScript</h3>
+	<h2> <span>ctx.rect(230, 160, 20, 40);</span> 	</h2>
+	<dl>
+		
+		
+	<dt> name the object. </dt>
+	<dd> <span> ctx.</span> arc(230, 160, 20, 40); </dd>
+		
+		
+		
+	<dt> Create the object</dt>
+	<dd>ctx.<span>rect </span>(230, 160, 20, 40);</dd>
+		
+		
+	<dt>Move right or left </dt>
+	<dd>ctx.arc(<span>230</span>,160, 20, 40);</dd>
+		
+		
+		
+	<dt>Move up or down.</dt>
+	<dd>ctx.arc(230, <span>160</span>, 20, 40);</dd>
+		
+		
+	
+	<dt>Make the width bigger or smaller</dt>
+	<dd>ctx.arc(240, 160, <span>20</span>, 40);</dd>
+		
+		
+	
+	<dt>Make the height bigger or smaller </dt>
+	<dd>ctx.arc(240, 160, 20, <span>40);</span></dd>
+		
+	</dl>
+	</div>
+	
+	<div>
+	
+	<dl>
+	<h3> </h3>	
+	<h2> </h2>	
+		
+	<dt></dt>
+	<dd></dd>	
+	
+	<dt></dt>
+	<dd></dd>
+		
+	<dt></dt>
+	<dd></dd>
+		
+	<dt></dt>
+	<dd></dd>		
+		
+	<dt></dt>
+	<dd></dd>	
+		
+	<dt></dt>
+	<dd></dd>	
+		
+	<dt></dt>
+	<dd></dd>	
+		
+	<dt></dt>
+	<dd></dd>	
+	
+	
+	
+	
+	
+	</dl>
+	
+	</div>
+	
+	
+	
+	
+	
+<script>	
+function myFunction() {
+	document.getElementById("demo").style.color = "red" ;
+}
+	
+	
+	
+	</script>
+	</body>
+</html>
