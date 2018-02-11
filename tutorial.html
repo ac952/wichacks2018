@@ -78,6 +78,18 @@
 				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
 			     </select> head.</p>
                     <p id="headdemo"></p>
+                <p>I want a   
+                <select id="eyecolor" onChange="myface()">
+                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                </select>
+                <select id="eyeshape" onChange="myface()">
+				    <option value="circle" style="  background:#d9d4d1;">circle</option>
+				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+			     </select> eyes.</p>                    
                 </div>
             </div>
 
@@ -92,7 +104,7 @@
                   var headcolor= document.getElementById("headcolor").value; 
 
                   if(headshape=="circle"){
-				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
 				  
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
@@ -100,16 +112,47 @@
                       ctx.fillStyle=headcolor;
                       ctx.fill();
                       ctx.stroke();
-			  }else{
-				   document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
-		
-				  ctx.clearRect(0, 0, canvas.width, canvas.height);
-				  ctx.beginPath();
-				  ctx.rect(140, 60, 200, 200);
-                  ctx.fillStyle=headcolor;
-                  ctx.fill();
-                  ctx.stroke();
-			  }
+                  }else{
+//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+
+                      ctx.clearRect(0, 0, canvas.width, canvas.height);
+                      ctx.beginPath();
+                      ctx.rect(140, 60, 200, 200);
+                      ctx.fillStyle=headcolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }
+                  var eyeshape = document.getElementById("eyeshape").value;
+                  var eyecolor= document.getElementById("eyecolor").value; 
+                  if(eyeshape=="circle"){
+//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+                      //left
+                      ctx.beginPath();
+                      ctx.arc(200,130,20,0,Math.PI*2,false);
+                      ctx.fillStyle=eyecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                      //right
+                      ctx.beginPath();
+                      ctx.arc(280,130,20,0,Math.PI*2,false);
+                      ctx.fillStyle=eyecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }else{
+//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+                      //left
+                      ctx.beginPath();
+                      ctx.rect(180, 110, 40, 40);
+                      ctx.fillStyle=eyecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                      //right
+                      ctx.beginPath();
+                      ctx.rect(260, 110, 40, 40);
+                      ctx.fillStyle=eyecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }
                  }
 
                 </script>
