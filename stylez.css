@@ -1,0 +1,43 @@
+body{
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: lightgoldenrodyellow;
+	color: navy;
+	
+	
+}
+span{
+	font-weight: bolder;
+	color: hotpink;
+	
+}
+
+heading{
+	font-size: 1.5em;
+	
+}
+
+ul{
+	background-color: red;
+	width: 80vw;
+	height: 120px;
+	padding: 40px;
+	font-weight:bolder;
+	display: inline-block;
+		
+	
+	
+}
+div{
+	border: 10px;
+	padding: 10px;
+	margin-top: 10px;
+	width: auto;
+	background-color: skyblue;
+	display: inline-block;
+}
+
+.w3-button{
+	width: 50vw;
+}
+
