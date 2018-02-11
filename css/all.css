@@ -16,12 +16,12 @@ ul {
 }
 
 .heading {
-text-align: center;
-text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 }
 
 h1{
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 li {
@@ -55,8 +55,44 @@ li a:hover:not(.active) {
   position: absolute;
   margin-left: 1110px;
   top: 5px;
+}
+
+.editable {
+  position: relative;
+  width: 50%;
+  margin-left: 40px;
+  margin-top: 5%;
+  background-color: #f9dbe3;
+  padding: 10px;
+  padding-left: 20px;
+  color: #96312a;
+}
+
+#decor{
+  width: 150px;
+  position: relative;
+  float: right;
+  bottom: 25%;
 
 }
+
+#heading {
+  border-style: dotted;
+  padding: 10px;
+  border-width: medium;
+}
+
+
+.Demo {
+  position: relative;
+  margin-right: 40px;
+  margin-top: 5%;
+  border-style: dotted;
+  border-color: rgb(214, 132, 110);
+  border-width: thick;
+}
+
+
 
 .screen {
   width: 70%;
@@ -81,116 +117,118 @@ li a:hover:not(.active) {
     color:#f4f2f3; background-color:#fc7c55; border-color: #f4f2f3; border-style: solid;
     border-radius: 10px; border-width: 10px; padding: 25px; font-size: 30px;font-weight: bold;}
 
-  .button1:hover {
-    background-color:#9e4024;
-  }
-
-  .imgUX { position:absolute; top: 150px; left: 210px;font-size: 70px; z-index: 3;
-    background-color: #6da6ed; color:#f4f2f3; border-color: #f4f2f3; border-style: solid;
-    border-radius: 10px; border-width: 15px; padding: 40px; }
-
-    .button2 {z-index: 5; position:absolute; top: 450px; left: 500px; text-decoration: none;
-      color:#f4f2f3; background-color:#6da6ed; border-color: #f4f2f3; border-style: solid;
-      border-radius: 10px; border-width: 10px; padding: 25px; font-size: 30px;font-weight: bold;}
-
-    .button2:hover {
-      background-color:#275187;
+    .button1:hover {
+      background-color:#9e4024;
     }
 
-    #instructions{
-      font-size: 30px;
-    }
+    .imgUX { position:absolute; top: 150px; left: 210px;font-size: 70px; z-index: 3;
+      background-color: #6da6ed; color:#f4f2f3; border-color: #f4f2f3; border-style: solid;
+      border-radius: 10px; border-width: 15px; padding: 40px; }
 
-    #moreinfo {
-      /* border:"1px"; */
-      width:"50%";
-      background-color:#f7d2d7;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-right: 40px;
-      padding-left: 40px;
-      margin-left: 200px;
-      margin-right: 200px;
-      font-size: 20px;
-    }
+      .button2 {z-index: 5; position:absolute; top: 450px; left: 500px; text-decoration: none;
+        color:#f4f2f3; background-color:#6da6ed; border-color: #f4f2f3; border-style: solid;
+        border-radius: 10px; border-width: 10px; padding: 25px; font-size: 30px;font-weight: bold;}
 
-    #gamebutton{
-      left: 510px;
-      top: 500px;
-    }
-/**
-slideshow css source: https://www.w3schools.com/howto/howto_js_slideshow.asp
-*/
-* {box-sizing:border-box}
+        .button2:hover {
+          background-color:#275187;
+        }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  max-height: 70%;
-  /* position: relative; */
-  margin: auto;
-}
+        #instructions{
+          font-size: 30px;
+        }
 
-.mySlides {
-  display: none;
-}
+        #moreinfo {
+          /* border:"1px"; */
+          width:"50%";
+          background-color:#f7d2d7;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          padding-right: 40px;
+          padding-left: 40px;
+          margin-left: 200px;
+          margin-right: 200px;
+          font-size: 20px;
+        }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 80%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
+        #gamebutton{
+          left: 510px;
+          top: 500px;
+        }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
+        /**
+        slideshow css source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+        */
+        * {box-sizing:border-box}
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 100%;
+          max-height: 70%;
+          /* position: relative; */
+          margin: auto;
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+        .mySlides {
+          display: none;
+        }
 
-.active, .dot:hover {
-  background-color: #7e4545;
-}
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 80%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: black;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+          color: white;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor:pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+          background-color: #7e4545;
+        }
+
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
