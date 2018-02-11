@@ -24,42 +24,97 @@
     </div>
   </nav>
 
+  <div class="colorTutorial">
+      <div class="editable">
+        <h2 id="heading">Choose an option from the drop down menu!</h2>
+        I want a
+        <select id="mySelect" onChange="myColor()">
+          <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+          <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+          <option value="green" style="color:green; background:#d9d4d1;">green</option>
+          <option value="black" style="color:black; background:#d9d4d1;">black</option>
+        </select> circle！
+        <p id="demo"></p>
+        <p>ctx.fill()</p>
+        <p>Color it!</p>
 
-  <div class="editable">
-    <h2 id="heading">Choose an option from the drop down menu!</h2>
-    I want a
-    <select id="mySelect" onChange="myColor()">
-      <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-      <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-      <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-      <option value="green" style="color:green; background:#d9d4d1;">green</option>
-      <option value="black" style="color:black; background:#d9d4d1;">black</option>
-    </select> circle！
-    <p id="demo"></p>
-    <p>ctx.fill()</p>
-    <p>Color it!</p>
+        <img id="decor" alt="decor" src="images/decor.png"/>
+      </div>
 
-    <img id="decor" alt="decor" src="images/decor.png"/>
+      <div id="canvas" class="Demo">
+        <canvas id="myCanvas" width="480" height="320"></canvas>
+        <script>
+        function myColor(){
+          var canvas = document.getElementById("myCanvas");
+          var ctx = canvas.getContext("2d");
+          var x = document.getElementById("mySelect").value;
+          document.getElementById("demo").innerHTML = "ctx.fillStyle= "+x+";";
+          ctx.beginPath();
+          ctx.arc(240, 160, 100, 0, Math.PI*2, false);
+          ctx.fillStyle=x;
+          ctx.fill();
+          ctx.stroke();
+        }
+
+        </script>
+
+      </div>
   </div>
+          <div class="facetutorial">
+            <div class="editable">
+                <div class="head">
+                <p>Let's draw a face</p>
+                <p>I want a 
+                <select id="headcolor" onChange="myface()">
+                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                </select>
+                <select id="headshape" onChange="myface()">
+				    <option value="circle" style="  background:#d9d4d1;">circle</option>
+				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+			     </select> head.</p>
+                    <p id="headdemo"></p>
+                </div>
+            </div>
 
 
-  <div id="canvas" class="Demo">
-    <canvas id="myCanvas" width="480" height="320"></canvas>
-    <script>
-    function myColor(){
-      var canvas = document.getElementById("myCanvas");
-      var ctx = canvas.getContext("2d");
-      var x = document.getElementById("mySelect").value;
-      document.getElementById("demo").innerHTML = "ctx.fillStyle= "+x+";";
-      ctx.beginPath();
-      ctx.arc(240, 160, 100, 0, Math.PI*2, false);
-      ctx.fillStyle=x;
-      ctx.fill();
-      ctx.stroke();
-    }
+            <div id="canvas2" class="Demo">
+                <canvas id="myCanvas1" width="480" height="320"></canvas>
+                <script>
+                  function myface(){
+                  var canvas = document.getElementById("myCanvas1");
+                  var ctx = canvas.getContext("2d");
+                  var headshape = document.getElementById("headshape").value;
+                  var headcolor= document.getElementById("headcolor").value; 
 
-    </script>
+                  if(headshape=="circle"){
+				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+				  
+                      ctx.clearRect(0, 0, canvas.width, canvas.height);
+                      ctx.beginPath();
+                      ctx.arc(240, 160, 100, 0, Math.PI*2, false);
+                      ctx.fillStyle=headcolor;
+                      ctx.fill();
+                      ctx.stroke();
+			  }else{
+				   document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+		
+				  ctx.clearRect(0, 0, canvas.width, canvas.height);
+				  ctx.beginPath();
+				  ctx.rect(140, 60, 200, 200);
+                  ctx.fillStyle=headcolor;
+                  ctx.fill();
+                  ctx.stroke();
+			  }
+                 }
 
-  </div>
+                </script>
+
+            </div>
+    </div>  
 </body>
 </html>
