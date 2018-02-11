@@ -103,6 +103,19 @@
 				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
 			     </select> nose.</p>
                     <p id="nosedemo"></p>
+                    <p>I want a 
+                <select id="mouthcolor" onChange="myface()">
+                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                </select>
+                <select id="mouthshape" onChange="myface()">
+				    <option value="circle" style="  background:#d9d4d1;">circle</option>
+				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+			     </select> mouth.</p>
+                    <p id="mouthdemo"></p>
                 </div>
             </div>
 
@@ -183,7 +196,25 @@
                       ctx.fillStyle=nosecolor;
                       ctx.fill();
                       ctx.stroke();
-                  }    
+                  } 
+                   var mouthshape = document.getElementById("mouthshape").value;
+                   var mouthcolor= document.getElementById("mouthcolor").value;     
+                    if(mouthshape=="circle"){
+//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+                      ctx.beginPath();
+                      ctx.arc(240,220,20,0,Math.PI*2,false);
+                      ctx.fillStyle=mouthcolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }else{
+//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+
+                      ctx.beginPath();
+                      ctx.rect(215, 220, 50, 20);
+                      ctx.fillStyle=mouthcolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }
                  }
 
                 </script>
