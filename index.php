@@ -13,7 +13,7 @@
       <div>
         <ul>
           <li><a class = "active" href="index.php">HOME</a></li>
-          <li><a href="tutorial.php">BUILD YOUR OWN APP!</a></li>
+          <li><a href="tutorial.html">BUILD YOUR OWN APP!</a></li>
         </ul>
       </div>
       <!-- <img id="logo" alt="logo1" src=""> -->
