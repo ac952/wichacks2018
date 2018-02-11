@@ -26,13 +26,16 @@
   <div class="shapeTutorial">
       <div class="editable">
         <h2 id="heading">Choose an option from the drop down menu!</h2>
-        <p>I want a
-            <select id="shape" onChange="myshape()">
-				<option value="circle" style="  background:#d9d4d1;">circle</option>
-				<option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			 </select> !</p>
-        <p id="shapedemo"></p>
-
+        <div class="changeable">
+            <p>I want a
+                <select id="shape" onChange="myshape()">
+                    <option value="circle" style="  background:#d9d4d1;">circle</option>
+                    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+                 </select> !</p>
+        </div>
+        <div class="code">
+            <p id="shapedemo">canvas.____(240, 160, 100, 0, Math.PI*2)</p>
+        </div>  
 
       </div>
 
@@ -43,13 +46,15 @@
               var canvas = document.getElementById("myshapeCanvas");
               var ctx = canvas.getContext("2d");
               var shape = document.getElementById("shape").value;
-//              document.getElementById("shapedemo").innerHTML = "ctx. "+shape+";";
+
               if(shape=="circle"){
+                    document.getElementById("shapedemo").innerHTML = "canvas.arc(240, 160, 100, 0, Math.PI*2);";
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
                     ctx.beginPath();
-                    ctx.arc(240, 160, 100, 0, Math.PI*2, false);
+                    ctx.arc(240, 160, 100, 0, Math.PI*2);
                     ctx.stroke();
               }else{
+                   document.getElementById("shapedemo").innerHTML = "canvas.rect(140, 60, 200, 200);";
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
                     ctx.beginPath();
                     ctx.rect(140, 60, 200, 200);
@@ -63,20 +68,23 @@
   </div>
   <div class="colorTutorial">
       <div class="editable">
-        <p>
-        I want a
-        <select id="mySelect" onChange="myColor()">
-          <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-          <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-          <option value="green" style="color:green; background:#d9d4d1;">green</option>
-          <option value="black" style="color:black; background:#d9d4d1;">black</option>
-        </select> circle！</p>
-        <p id="demo"></p>
-        <p>ctx.fill()</p>
-        <p>Color it!</p>
-
-        <img id="decor" alt="decor" src="images/decor.png"/>
+        <div class="changeable">
+            <p>I want a
+            <select id="mySelect" onChange="myColor()">
+              <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+              <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+              <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+              <option value="green" style="color:green; background:#d9d4d1;">green</option>
+              <option value="black" style="color:black; background:#d9d4d1;">black</option>
+            </select> circle！</p>
+        </div>
+        <div class="code">
+            <p id="demo">object.fillStyle=______</p>
+            <p>object.fill()</p>
+            <p>Color it!</p>
+            <img id="decor" alt="decor" src="images/decor.png"/>
+        </div>
+        
       </div>
 
       <div id="canvas" class="Demo">
@@ -86,7 +94,7 @@
           var canvas = document.getElementById("myCanvas");
           var ctx = canvas.getContext("2d");
           var x = document.getElementById("mySelect").value;
-          document.getElementById("demo").innerHTML = "ctx.fillStyle= "+x+";";
+            document.getElementById("demo").innerHTML = "ctx.fillStyle= "+x+";";
           ctx.beginPath();
           ctx.arc(240, 160, 100, 0, Math.PI*2, false);
           ctx.fillStyle=x;
@@ -100,60 +108,68 @@
   </div>
           <div class="facetutorial">
             <div class="editable">
-                <div class="head">
-                <p>Let's draw a face</p>
-                <p>I want a 
-                <select id="headcolor" onChange="myface()">
-                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
-                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
-                </select>
-                <select id="headshape" onChange="myface()">
-				    <option value="circle" style="  background:#d9d4d1;">circle</option>
-				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			     </select> head.</p>
-                    <p id="headdemo"></p>
-                <p>I want a   
-                <select id="eyecolor" onChange="myface()">
-                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
-                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
-                </select>
-                <select id="eyeshape" onChange="myface()">
-				    <option value="circle" style="  background:#d9d4d1;">circle</option>
-				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			     </select> eyes.</p>
-                 <p>I want a 
-                <select id="nosecolor" onChange="myface()">
-                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
-                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
-                </select>
-                <select id="noseshape" onChange="myface()">
-				    <option value="circle" style="  background:#d9d4d1;">circle</option>
-				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			     </select> nose.</p>
-                    <p id="nosedemo"></p>
+                <div class="changeable">
+                    <div class="head">
+                    <p>Let's draw a face</p>
                     <p>I want a 
-                <select id="mouthcolor" onChange="myface()">
-                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
-                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
-                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
-                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
-                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
-                </select>
-                <select id="mouthshape" onChange="myface()">
-				    <option value="circle" style="  background:#d9d4d1;">circle</option>
-				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			     </select> mouth.</p>
-                    <p id="mouthdemo"></p>
+                    <select id="headcolor" onChange="myface()">
+                        <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                         <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                         <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                         <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                         <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                    </select>
+                    <select id="headshape" onChange="myface()">
+                        <option value="circle" style="  background:#d9d4d1;">circle</option>
+                        <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+                     </select> head.</p>
+
+                    <p>I want a   
+                    <select id="eyecolor" onChange="myface()">
+                        <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                         <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                         <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                         <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                         <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                    </select>
+                    <select id="eyeshape" onChange="myface()">
+                        <option value="circle" style="  background:#d9d4d1;">circle</option>
+                        <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+                     </select> eyes.</p>
+                     <p>I want a 
+                    <select id="nosecolor" onChange="myface()">
+                        <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                         <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                         <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                         <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                         <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                    </select>
+                    <select id="noseshape" onChange="myface()">
+                        <option value="circle" style="  background:#d9d4d1;">circle</option>
+                        <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+                     </select> nose.</p>
+
+                        <p>I want a 
+                    <select id="mouthcolor" onChange="myface()">
+                        <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                         <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                         <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                         <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                         <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                    </select>
+                    <select id="mouthshape" onChange="myface()">
+                        <option value="circle" style="  background:#d9d4d1;">circle</option>
+                        <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+                     </select> mouth.</p>
+                    </div>
                 </div>
+                <div class="code">
+                        <br>
+                        <p id="headdemo"></p>
+                        <p id="eyedemo"></p>
+                        <p id="nosedemo"></p>
+                        <p id="mouthdemo"></p>
+                </div> 
             </div>
 
 
@@ -167,7 +183,7 @@
                   var headcolor= document.getElementById("headcolor").value; 
 
                   if(headshape=="circle"){
-//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+			         document.getElementById("headdemo").innerHTML ="                      ctx.arc(240, 160, 100, 0, Math.PI*2);<br>ctx.fillStyle="+headcolor+";";
 				  
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
@@ -176,7 +192,7 @@
                       ctx.fill();
                       ctx.stroke();
                   }else{
-//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+                      document.getElementById("headdemo").innerHTML ="ctx.rect(140, 60, 200, 200);<br>ctx.fillStyle="+headcolor+";";
 
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
@@ -188,7 +204,7 @@
                   var eyeshape = document.getElementById("eyeshape").value;
                   var eyecolor= document.getElementById("eyecolor").value; 
                   if(eyeshape=="circle"){
-//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+				    document.getElementById("eyedemo").innerHTML ="                 ctx.arc(200,130,20,0,Math.PI*2);<br>ctx.fillStyle="+eyecolor+";";
                       //left
                       ctx.beginPath();
                       ctx.arc(200,130,20,0,Math.PI*2,false);
@@ -202,7 +218,7 @@
                       ctx.fill();
                       ctx.stroke();
                   }else{
-//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+                       document.getElementById("eyedemo").innerHTML ="                 ctx.rect(180, 110, 40, 40);<br>ctx.fillStyle="+eyecolor+";";
                       //left
                       ctx.beginPath();
                       ctx.rect(180, 110, 40, 40);
@@ -219,14 +235,14 @@
                    var noseshape = document.getElementById("noseshape").value;
                    var nosecolor= document.getElementById("nosecolor").value;     
                     if(noseshape=="circle"){
-//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+			         document.getElementById("nosedemo").innerHTML ="                      ctx.arc(240,160,20,0,Math.PI*2);<br>ctx.fillStyle="+nosecolor+";<br>ctx.fill();";
                       ctx.beginPath();
                       ctx.arc(240,160,20,0,Math.PI*2,false);
                       ctx.fillStyle=nosecolor;
                       ctx.fill();
                       ctx.stroke();
                   }else{
-//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+                       document.getElementById("nosedemo").innerHTML ="ctx.rect(230, 160, 20, 40);<br>ctx.fillStyle="+nosecolor+";<br>ctx.fill();";
 
                       ctx.beginPath();
                       ctx.rect(230, 160, 20, 40);
@@ -237,14 +253,14 @@
                    var mouthshape = document.getElementById("mouthshape").value;
                    var mouthcolor= document.getElementById("mouthcolor").value;     
                     if(mouthshape=="circle"){
-//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+				    document.getElementById("mouthdemo").innerHTML ="                      ctx.arc(240,220,20,0,Math.PI*2);<br>ctx.fillStyle="+mouthcolor+";<br>ctx.fill();";
                       ctx.beginPath();
                       ctx.arc(240,220,20,0,Math.PI*2,false);
                       ctx.fillStyle=mouthcolor;
                       ctx.fill();
                       ctx.stroke();
                   }else{
-//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+                      document.getElementById("mouthdemo").innerHTML ="                      ctx.rect(215, 220, 50, 20);<br>ctx.fillStyle="+mouthcolor+";<br>ctx.fill();";
 
                       ctx.beginPath();
                       ctx.rect(215, 220, 50, 20);

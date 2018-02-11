@@ -1,10 +1,17 @@
 
 .editable{
 	height: 320px;
-    width: 50%;
+    display: inline-block;
 	float:left;
 }
 
 .Demo{
 	float:right;
+}
+.changeable{
+    width: 50%;
+    display: inline-block;
+}
+.code{
+    float:right;
 }
