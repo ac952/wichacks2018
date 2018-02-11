@@ -58,6 +58,11 @@ li a:hover:not(.active) {
 
 }
 
+.screen {
+  width: 70%;
+  margin-left: 150px;
+}
+
 .bg{
   /* background-image: "flowers.png"; */
   position:absolute;

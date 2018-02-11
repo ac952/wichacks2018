@@ -39,7 +39,7 @@
         <div class="container">
           <img class="imgA1" alt="pic" src="images/code.png" width="100%" />
           <p class="imgUX">Be a UX/UI Designer!</p>
-          <a class="button2" href="">START HERE</a>
+          <a class="button2" href="design.html">START HERE</a>
         </div>
       </figure>
     </div>
