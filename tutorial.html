@@ -89,7 +89,20 @@
                 <select id="eyeshape" onChange="myface()">
 				    <option value="circle" style="  background:#d9d4d1;">circle</option>
 				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
-			     </select> eyes.</p>                    
+			     </select> eyes.</p>
+                 <p>I want a 
+                <select id="nosecolor" onChange="myface()">
+                    <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+                     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
+                     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
+                     <option value="green" style="color:green; background:#d9d4d1;">green</option>
+                     <option value="black" style="color:black; background:#d9d4d1;">black</option>
+                </select>
+                <select id="noseshape" onChange="myface()">
+				    <option value="circle" style="  background:#d9d4d1;">circle</option>
+				    <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+			     </select> nose.</p>
+                    <p id="nosedemo"></p>
                 </div>
             </div>
 
@@ -153,6 +166,24 @@
                       ctx.fill();
                       ctx.stroke();
                   }
+                   var noseshape = document.getElementById("noseshape").value;
+                   var nosecolor= document.getElementById("nosecolor").value;     
+                    if(noseshape=="circle"){
+//				    document.getElementById("headdemo").innerHTML ="The radius of my circle wile be:";
+                      ctx.beginPath();
+                      ctx.arc(240,160,20,0,Math.PI*2,false);
+                      ctx.fillStyle=nosecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }else{
+//                       document.getElementById("headdemo").innerHTML ="The width and height of my rectangle will be:";
+
+                      ctx.beginPath();
+                      ctx.rect(230, 160, 20, 40);
+                      ctx.fillStyle=nosecolor;
+                      ctx.fill();
+                      ctx.stroke();
+                  }    
                  }
 
                 </script>
