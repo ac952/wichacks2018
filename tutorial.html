@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
   <link rel="stylesheet" type="text/css" href="css/tutorial.css"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"> </script>
 
   <title>WicHacks</title>
@@ -81,7 +82,7 @@
         <div class="code">
             <p id="demo">object.fillStyle=______</p>
             <p>object.fill()</p>
-            <p>Color it!</p>
+<!--            <p>Color it!</p>-->
             <img id="decor" alt="decor" src="images/decor.png"/>
         </div>
         
@@ -164,11 +165,12 @@
                     </div>
                 </div>
                 <div class="code">
-                        <br>
-                        <p id="headdemo"></p>
-                        <p id="eyedemo"></p>
-                        <p id="nosedemo"></p>
-                        <p id="mouthdemo"></p>
+   
+                        <p id="headdemo">                      canvas.____(240, 160, 100, 0, Math.PI*2);<br>canvas.fillStyle=____;</p>
+                        <p id="eyedemo">canvas.____(200,130,20,0,Math.PI*2);<br>canvas.fillStyle=____;</p>
+                        <p id="nosedemo">canvas.____(240,160,20,0,Math.PI*2);<br>canvas.fillStyle=____;</p>
+                        <p id="mouthdemo">                     canvas.____(240,220,20,0,Math.PI*2);<br>canvas.fillStyle=____;</p>
+                       
                 </div> 
             </div>
 
@@ -183,7 +185,7 @@
                   var headcolor= document.getElementById("headcolor").value; 
 
                   if(headshape=="circle"){
-			         document.getElementById("headdemo").innerHTML ="                      ctx.arc(240, 160, 100, 0, Math.PI*2);<br>ctx.fillStyle="+headcolor+";";
+			         document.getElementById("headdemo").innerHTML ="                      canvas.arc(240, 160, 100, 0, Math.PI*2);<br>canvas.fillStyle="+headcolor+";";
 				  
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
@@ -192,7 +194,7 @@
                       ctx.fill();
                       ctx.stroke();
                   }else{
-                      document.getElementById("headdemo").innerHTML ="ctx.rect(140, 60, 200, 200);<br>ctx.fillStyle="+headcolor+";";
+                      document.getElementById("headdemo").innerHTML ="canvas.rect(140, 60, 200, 200);<br>canvas.fillStyle="+headcolor+";";
 
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
@@ -204,7 +206,7 @@
                   var eyeshape = document.getElementById("eyeshape").value;
                   var eyecolor= document.getElementById("eyecolor").value; 
                   if(eyeshape=="circle"){
-				    document.getElementById("eyedemo").innerHTML ="                 ctx.arc(200,130,20,0,Math.PI*2);<br>ctx.fillStyle="+eyecolor+";";
+				    document.getElementById("eyedemo").innerHTML ="                 canvas.arc(200,130,20,0,Math.PI*2);<br>canvas.fillStyle="+eyecolor+";";
                       //left
                       ctx.beginPath();
                       ctx.arc(200,130,20,0,Math.PI*2,false);
@@ -218,7 +220,7 @@
                       ctx.fill();
                       ctx.stroke();
                   }else{
-                       document.getElementById("eyedemo").innerHTML ="                 ctx.rect(180, 110, 40, 40);<br>ctx.fillStyle="+eyecolor+";";
+                       document.getElementById("eyedemo").innerHTML ="                 canvas.rect(180, 110, 40, 40);<br>canvas.fillStyle="+eyecolor+";";
                       //left
                       ctx.beginPath();
                       ctx.rect(180, 110, 40, 40);
@@ -235,14 +237,14 @@
                    var noseshape = document.getElementById("noseshape").value;
                    var nosecolor= document.getElementById("nosecolor").value;     
                     if(noseshape=="circle"){
-			         document.getElementById("nosedemo").innerHTML ="                      ctx.arc(240,160,20,0,Math.PI*2);<br>ctx.fillStyle="+nosecolor+";<br>ctx.fill();";
+			         document.getElementById("nosedemo").innerHTML ="                      canvas.arc(240,160,20,0,Math.PI*2);<br>canvas.fillStyle="+nosecolor+";";
                       ctx.beginPath();
                       ctx.arc(240,160,20,0,Math.PI*2,false);
                       ctx.fillStyle=nosecolor;
                       ctx.fill();
                       ctx.stroke();
                   }else{
-                       document.getElementById("nosedemo").innerHTML ="ctx.rect(230, 160, 20, 40);<br>ctx.fillStyle="+nosecolor+";<br>ctx.fill();";
+                       document.getElementById("nosedemo").innerHTML ="canvas.rect(230, 160, 20, 40);<br>canvas.fillStyle="+nosecolor+";";
 
                       ctx.beginPath();
                       ctx.rect(230, 160, 20, 40);
@@ -253,14 +255,14 @@
                    var mouthshape = document.getElementById("mouthshape").value;
                    var mouthcolor= document.getElementById("mouthcolor").value;     
                     if(mouthshape=="circle"){
-				    document.getElementById("mouthdemo").innerHTML ="                      ctx.arc(240,220,20,0,Math.PI*2);<br>ctx.fillStyle="+mouthcolor+";<br>ctx.fill();";
+				    document.getElementById("mouthdemo").innerHTML ="                      canvas.arc(240,220,20,0,Math.PI*2);<br>canvas.fillStyle="+mouthcolor+";";
                       ctx.beginPath();
                       ctx.arc(240,220,20,0,Math.PI*2,false);
                       ctx.fillStyle=mouthcolor;
                       ctx.fill();
                       ctx.stroke();
                   }else{
-                      document.getElementById("mouthdemo").innerHTML ="                      ctx.rect(215, 220, 50, 20);<br>ctx.fillStyle="+mouthcolor+";<br>ctx.fill();";
+                      document.getElementById("mouthdemo").innerHTML ="                      canvas.rect(215, 220, 50, 20);<br>canvas.fillStyle="+mouthcolor+";";
 
                       ctx.beginPath();
                       ctx.rect(215, 220, 50, 20);

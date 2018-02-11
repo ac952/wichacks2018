@@ -1,4 +1,8 @@
-
+body{
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 600;
+    font-size: 1.3em;
+}
 .editable{
 	height: 320px;
     display: inline-block;
