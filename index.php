@@ -19,38 +19,33 @@
       <!-- <img id="logo" alt="logo1" src=""> -->
     </div>
   </nav>
-  <h1 class="heading"> Girls Run the World</h1>
-  <!--slideshow source: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+  <!-- <h1 class="heading"> Girls Run the World</h1> -->
   <div class="slideshow-container">
     <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
+      <!-- <div class="numbertext">1 / 2</div> -->
       <figure>
-        <img alt="pic" src="images/fashionpattern.png" width="950px" height="600px" />
-        <a href="game.html" class="button">Link Button</a>
+        <!-- <img alt="pic" src="images/fashionpattern.png" width="950px" height="600px" /> -->
+        <div class="container">
+          <img class="imgA1" alt="pic" src="images/slide1.png" width="100%" />
+          <p class="imgB1">Five In A Row</p>
+          <a class="button1" href="game.html">PLAY</a>
+        </div>
       </figure>
     </div>
-
-    <!-- <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <figure>
-        <img alt="pic" src="images/girl1.png" />
-      </figure>
-    </div> -->
-
     <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
+      <!-- <div class="numbertext">2 / 2</div> -->
       <figure>
-        <img alt="pic" src="images/girl2.png" width="300px" />
-        <!-- <button id="button" type="button">Click Me!</button> -->
-        <a href="" class="button">Link Button</a>
+        <div class="container">
+          <img class="imgA1" alt="pic" src="images/code.png" width="100%" />
+          <p class="imgUX">Be a UX/UI Designer!</p>
+          <a class="button2" href="">START HERE</a>
+        </div>
       </figure>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-
-  <button type="button">Click Me!</button>
 
   <script src="scripts/slideShow.js" type="text/javascript"> </script>
 
