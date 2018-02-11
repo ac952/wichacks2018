@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" type="text/css" href="css/all.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/tutorial.css"/>
   <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"> </script>
 
   <title>WicHacks</title>
@@ -18,12 +19,11 @@
           <li><a class = "active" href="tutorial.html">BUILD YOUR OWN APP!</a></li>
         </ul>
       </div>
-      <img id="logo" alt="logo1" src="images/logo.png">
-      <img id="sign" alt="sign" src="images/sign.png">
+      <!-- <img id="logo" alt="logo1" src=""> -->
     </div>
   </nav>
-	<div id="editable">
-		I want a
+	<div class="editable">
+		I want a 
 		<select id="mySelect" onChange="myColor()">
             <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
 		     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
@@ -31,14 +31,14 @@
              <option value="green" style="color:green; background:#d9d4d1;">green</option>
              <option value="black" style="color:black; background:#d9d4d1;">black</option>
         </select> circle！
+      <p id="demo"></p>
+      <p>ctx.fill()</p> 
+      <p>Color it!</p>
 	</div>
-	<p id="demo"></p>
 
-    <p>ctx.fill()</p>
-    <p>Color it!</p>
-	<div id="canvas" class="colorDemo">
+
+	<div id="canvas" class="Demo">
         <canvas id="myCanvas" width="480" height="320"></canvas>
-
         <script>
           function myColor(){
           var canvas = document.getElementById("myCanvas");
