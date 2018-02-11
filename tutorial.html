@@ -23,10 +23,47 @@
       <img id="sign" alt="sign" src="images/sign.png">
     </div>
   </nav>
-
-  <div class="colorTutorial">
+  <div class="shapeTutorial">
       <div class="editable">
         <h2 id="heading">Choose an option from the drop down menu!</h2>
+        <p>I want a
+            <select id="shape" onChange="myshape()">
+				<option value="circle" style="  background:#d9d4d1;">circle</option>
+				<option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
+			 </select> !</p>
+        <p id="shapedemo"></p>
+
+
+      </div>
+
+      <div id="canvas1" class="Demo">
+        <canvas id="myshapeCanvas" width="480" height="320"></canvas>
+        <script>
+            function myshape(){
+              var canvas = document.getElementById("myshapeCanvas");
+              var ctx = canvas.getContext("2d");
+              var shape = document.getElementById("shape").value;
+//              document.getElementById("shapedemo").innerHTML = "ctx. "+shape+";";
+              if(shape=="circle"){
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.beginPath();
+                    ctx.arc(240, 160, 100, 0, Math.PI*2, false);
+                    ctx.stroke();
+              }else{
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    ctx.beginPath();
+                    ctx.rect(140, 60, 200, 200);
+                    ctx.stroke();
+              }
+            }
+        </script>
+
+
+      </div>
+  </div>
+  <div class="colorTutorial">
+      <div class="editable">
+        <p>
         I want a
         <select id="mySelect" onChange="myColor()">
           <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
@@ -34,7 +71,7 @@
           <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
           <option value="green" style="color:green; background:#d9d4d1;">green</option>
           <option value="black" style="color:black; background:#d9d4d1;">black</option>
-        </select> circle！
+        </select> circle！</p>
         <p id="demo"></p>
         <p>ctx.fill()</p>
         <p>Color it!</p>
