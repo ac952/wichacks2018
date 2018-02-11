@@ -73,7 +73,20 @@ li a:hover:not(.active) {
   position: relative;
   float: right;
   bottom: 30%;
+}
 
+#decor3{
+  width: 80px;
+  position: relative;
+  float: left;
+  bottom: 30%;
+}
+
+#decor2{
+  width: 130px;
+  position: relative;
+  float: left;
+  bottom: 30%;
 }
 
 #heading {

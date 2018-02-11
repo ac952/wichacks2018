@@ -33,10 +33,11 @@
                     <option value="circle" style="  background:#d9d4d1;">circle</option>
                     <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
                  </select> !</p>
+                 <img id="decor3" alt="decor3" src="images/decor3.png"/>
         </div>
         <div class="code">
             <p id="shapedemo">canvas.____(240, 160, 100, 0, Math.PI*2)</p>
-        </div>  
+        </div>
 
       </div>
 
@@ -85,7 +86,7 @@
 <!--            <p>Color it!</p>-->
             <img id="decor" alt="decor" src="images/decor.png"/>
         </div>
-        
+
       </div>
 
       <div id="canvas" class="Demo">
@@ -112,7 +113,7 @@
                 <div class="changeable">
                     <div class="head">
                     <p>Let's draw a face</p>
-                    <p>I want a 
+                    <p>I want a
                     <select id="headcolor" onChange="myface()">
                         <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
                          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
@@ -125,7 +126,7 @@
                         <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
                      </select> head.</p>
 
-                    <p>I want a   
+                    <p>I want a
                     <select id="eyecolor" onChange="myface()">
                         <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
                          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
@@ -137,7 +138,7 @@
                         <option value="circle" style="  background:#d9d4d1;">circle</option>
                         <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
                      </select> eyes.</p>
-                     <p>I want a 
+                     <p>I want a
                     <select id="nosecolor" onChange="myface()">
                         <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
                          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
@@ -150,7 +151,7 @@
                         <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
                      </select> nose.</p>
 
-                        <p>I want a 
+                        <p>I want a
                     <select id="mouthcolor" onChange="myface()">
                         <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
                          <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
@@ -163,8 +164,11 @@
                         <option value="rectangle" style=" background:#d9d4d1;">rectangle</option>
                      </select> mouth.</p>
                     </div>
+                      <img id="decor2" alt="decor2" src="images/decor2.png"/>
+
                 </div>
                 <div class="code">
+<<<<<<< HEAD
    
                         <p id="headdemo">                      canvas.____(240, 160, 100, 0, Math.PI*2);<br>canvas.fillStyle=____;</p>
                         <p id="eyedemo">canvas.____(200,130,20,0,Math.PI*2);<br>canvas.fillStyle=____;</p>
@@ -172,6 +176,14 @@
                         <p id="mouthdemo">                     canvas.____(240,220,20,0,Math.PI*2);<br>canvas.fillStyle=____;</p>
                        
                 </div> 
+=======
+                        <br>
+                        <p id="headdemo"></p>
+                        <p id="eyedemo"></p>
+                        <p id="nosedemo"></p>
+                        <p id="mouthdemo"></p>
+                </div>
+>>>>>>> origin/master
             </div>
 
 
@@ -182,11 +194,16 @@
                   var canvas = document.getElementById("myCanvas1");
                   var ctx = canvas.getContext("2d");
                   var headshape = document.getElementById("headshape").value;
-                  var headcolor= document.getElementById("headcolor").value; 
+                  var headcolor= document.getElementById("headcolor").value;
 
                   if(headshape=="circle"){
+<<<<<<< HEAD
 			         document.getElementById("headdemo").innerHTML ="                      canvas.arc(240, 160, 100, 0, Math.PI*2);<br>canvas.fillStyle="+headcolor+";";
 				  
+=======
+			         document.getElementById("headdemo").innerHTML ="                      ctx.arc(240, 160, 100, 0, Math.PI*2);<br>ctx.fillStyle="+headcolor+";";
+
+>>>>>>> origin/master
                       ctx.clearRect(0, 0, canvas.width, canvas.height);
                       ctx.beginPath();
                       ctx.arc(240, 160, 100, 0, Math.PI*2, false);
@@ -204,7 +221,7 @@
                       ctx.stroke();
                   }
                   var eyeshape = document.getElementById("eyeshape").value;
-                  var eyecolor= document.getElementById("eyecolor").value; 
+                  var eyecolor= document.getElementById("eyecolor").value;
                   if(eyeshape=="circle"){
 				    document.getElementById("eyedemo").innerHTML ="                 canvas.arc(200,130,20,0,Math.PI*2);<br>canvas.fillStyle="+eyecolor+";";
                       //left
@@ -235,7 +252,7 @@
                       ctx.stroke();
                   }
                    var noseshape = document.getElementById("noseshape").value;
-                   var nosecolor= document.getElementById("nosecolor").value;     
+                   var nosecolor= document.getElementById("nosecolor").value;
                     if(noseshape=="circle"){
 			         document.getElementById("nosedemo").innerHTML ="                      canvas.arc(240,160,20,0,Math.PI*2);<br>canvas.fillStyle="+nosecolor+";";
                       ctx.beginPath();
@@ -251,9 +268,9 @@
                       ctx.fillStyle=nosecolor;
                       ctx.fill();
                       ctx.stroke();
-                  } 
+                  }
                    var mouthshape = document.getElementById("mouthshape").value;
-                   var mouthcolor= document.getElementById("mouthcolor").value;     
+                   var mouthcolor= document.getElementById("mouthcolor").value;
                     if(mouthshape=="circle"){
 				    document.getElementById("mouthdemo").innerHTML ="                      canvas.arc(240,220,20,0,Math.PI*2);<br>canvas.fillStyle="+mouthcolor+";";
                       ctx.beginPath();
@@ -273,8 +290,7 @@
                  }
 
                 </script>
-
             </div>
-    </div>  
+    </div>
 </body>
 </html>
