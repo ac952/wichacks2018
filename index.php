@@ -13,7 +13,7 @@
     <div>
       <div>
         <ul>
-          <li><a class = "active" href="index.php">HOME</a></li>
+          <li><a class = "active" href="index.php">Home</a></li>
           <li><a href="tutorial.html">JavaScript Drawing Tutorial</a></li>
           <li><a href="circle.html">JavaScript Tutorial</a></li>
         </ul>
