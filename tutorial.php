@@ -22,7 +22,7 @@
 	<div id="editable">
 		I want a
 		<select id="mySelect" onChange="myColor()">
-            <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
+        <option value="red" style="color:#FF0000;  background:#d9d4d1;">red</option>
 		     <option value="blue" style="color:blue; background:#d9d4d1;">blue</option>
 		     <option value="yellow" style="color:yellow; background:#d9d4d1;">yellow</option>
              <option value="green" style="color:green; background:#d9d4d1;">green</option>

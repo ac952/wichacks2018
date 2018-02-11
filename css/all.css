@@ -1,6 +1,7 @@
-body {
+body,html {
   font-family: sans-serif;
   margin: 0px;
+  /* height: 100%; */
 }
 
 ul {
@@ -49,9 +50,14 @@ li a:hover:not(.active) {
   left:40px;
 }
 
-/* #button{
-  z-index: 30;
-} */
+.bg{
+  /* background-image: "flowers.png"; */
+  position:absolute;
+  margin-left: 250px;
+  top: 435px;
+  /* width:"1000px"; */
+  z-index: 1;
+}
 
 .container { position:relative; }
 .imgA1 { position:absolute; top: 0px; left: 0px; z-index: 1; }
@@ -97,6 +103,7 @@ li a:hover:not(.active) {
 
     #gamebutton{
       left: 510px;
+      top: 500px;
     }
 /**
 slideshow css source: https://www.w3schools.com/howto/howto_js_slideshow.asp
