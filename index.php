@@ -43,7 +43,23 @@
         </div>
       </figure>
     </div>
-
+<div class="mySlides fade">
+      <!-- <div class="username">2 / 2</div> -->
+      <figure>
+        <div class="container">
+          <img class="imgA1" alt="pic" src="images/code.png" width="100%" />
+          <p class="imgUX">How to Code in JavaScript</p>
+          <a class="button3" href="circle.html">JavaScript Tutorial</a>
+        </div>
+      </figure>
+    </div>
+    
+    
+    
+    
+    
+    
+    
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
