@@ -16,7 +16,8 @@
           <li><a href="tutorial.php">BUILD YOUR OWN APP!</a></li>
         </ul>
       </div>
-      <!-- <img id="logo" alt="logo1" src=""> -->
+      <img id="logo" alt="logo1" src="images/logo.png">
+      <img id="sign" alt="sign" src="images/sign.png">
     </div>
   </nav>
   <!-- <h1 class="heading"> Girls Run the World</h1> -->

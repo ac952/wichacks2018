@@ -16,7 +16,7 @@
           <li><a class = "active" href="tutorial.php">BUILD YOUR OWN APP!</a></li>
         </ul>
       </div>
-      <!-- <img id="logo" alt="logo1" src=""> -->
+        <img id="logo" alt="logo1" src="images/logo.png">
     </div>
   </nav>
 	<div id="editable">
